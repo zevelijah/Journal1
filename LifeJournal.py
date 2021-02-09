@@ -131,6 +131,16 @@ while True:
                                 amount = []
                                 it = []
                                 entry = int(input("\nHow many entries are you adding \nExample, if are adding your groceries, and you bought 200 items,\nyour entries will equal 200:::\n>>>> "))
+                               except ValueError:
+                                    if entry == '':
+                                        leave = input("So I take it you don't want to be here? (y/n))
+                                        if leave == y or leave == Y:
+                                            break
+                                        if leave == n or leave == N:
+                                            Apologies = input("Really? Must have typed enter by accident. \nGuess you're gonna have to start over from the beginning.")
+                                            break
+                                        else:
+                                            input('We only take numbers.')
                                 for e in range(entry):
                                     item = input("Enter Item: ")
                                     amt = float(input("Enter Price(with decimals,no dollar sign needed): "))
